@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Kaczuszki – Twój pomocnik w programowaniu. Wykorzystaj kaczki do debugowania, wspomagania kreatywności i redukcji stresu.">
+    <meta name="keywords" content="kaczuszki, programowanie, debugowanie, kreatywność, stres">
+    <meta name="author" content="Kamil Pogonowski">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="duck-icon.png" type="image/png">
+    <title>Kaczuszki – Twój pomocnik w programowaniu</title>
+</head>
+<body>
+<div class="banner">
+    <span class="banner-text" id="bannerText"></span>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <h2>Do czego wykorzystać kaczki?</h2>
+            <div class="scroll-text" id="scrollText">
+                Kaczuszki pomagają programistom tłumaczyć kod na głos, co często prowadzi do znalezienia błędów i lepszego zrozumienia problemu.
+            </div>
+            <ul>
+                <li>Debugowanie kodu (metoda Rubber Duck Debugging)</li>
+                <li>Wspomaganie kreatywności i relaksu</li>
+                <li>Redukcja stresu podczas programowania</li>
+                <li>Symbol otwartości i współpracy w zespole</li>
+            </ul>
+            <div class="duck-facts">
+                <h3>Ciekawostki o kaczkach</h3>
+                <ul>
+                    <li>Kaczki są symbolem cierpliwości i wytrwałości.</li>
+                    <li>W wielu firmach IT kaczka to nieodłączny element biurka programisty.</li>
+                    <li>W kulturze internetowej kaczka stała się ikoną debugowania.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column duck-color-col">
+            <div class="duck-section">
+                <img id="duckImg" src="duck-yellow.jpg" alt="Kaczka" />
+                <div class="color-list">
+                    <div class="color-btn" style="background: #e63946;" onclick="changeDuckColor('red')"></div>
+                    <div class="color-btn" style="background: #ffb347;" onclick="changeDuckColor('orange')"></div>
+                    <div class="color-btn" style="background: #ffe066;" onclick="changeDuckColor('yellow')"></div>
+                </div>
+                <ul class="duck-list">
+                    <li>Czerwona kaczka – symbol energii i odwagi</li>
+                    <li>Pomarańczowa kaczka – kreatywność i optymizm</li>
+                    <li>Żółta kaczka – klasyka i pozytywna energia</li>
+                </ul>
+            </div>
+            <div class="duck-sound" id="duckSoundSection">
+                <button onclick="playDuckSound()">Odtwórz dźwięk kaczki</button>
+                <audio id="duckAudio" src="duck.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    <h3>Galeria kaczek</h3>
+    <div class="gallery" id="duckGallery">
+        <img class="gallery-img" src="img/duck-yellow.jpg" alt="Kaczka klasyczna" onclick="openImageModal(this)" />
+        <img class="gallery-img" src="img/duck-creative.jpg" alt="Kaczka kreatywna" onclick="openImageModal(this)" />
+        <img class="gallery-img" src="img/duck-energetyczna.jpg" alt="Kaczka energetyczna" onclick="openImageModal(this)" />
+    </div>
+    <div class="gallery-description">
+        <p>Każda kaczka może być Twoim partnerem w programowaniu! Wybierz ulubioną lub stwórz własną wersję w Photoshopie.</p>
+    </div>
+    <div id="imgModal" class="img-modal" onclick="closeImageModal(event)">
+        <span class="img-modal-close" onclick="closeImageModal(event)">&times;</span>
+        <img class="img-modal-content" id="imgModalContent" />
+        <div class="img-modal-caption" id="imgModalCaption"></div>
+    </div>
+    <section class="values-section">
+        <h3>Jak kaczka może ci pomóc</h3>
+        <div class="values-flex">
+            <div class="value-box">
+                <div class="value-icon value-creative"></div>
+                <h4>Kreatywność</h4>
+                <p>Stawiamy na nieszablonowe pomysły i świeże spojrzenie na każdy projekt. Kaczka inspiruje do szukania nowych rozwiązań!</p>
+            </div>
+            <div class="value-box">
+                <div class="value-icon value-partner"></div>
+                <h4>Partnerstwo</h4>
+                <p>Współpraca i otwartość – razem osiągamy więcej. Kaczka to symbol wsparcia i zaufania w zespole.</p>
+            </div>
+            <div class="value-box">
+                <div class="value-icon value-innovation"></div>
+                <h4>Innowacja</h4>
+                <p>Łączymy tradycję z nowoczesnością. Kaczka i AI? Czemu nie! Zawsze szukamy nowych technologii i inspiracji.</p>
+            </div>
+        </div>
+    </section>
+    <section class="how-to-start">
+        <h3>Jak zacząć z kaczką?</h3>
+        <ol>
+            <li>Postaw kaczuszkę na swoim biurku lub obok monitora.</li>
+            <li>Gdy napotkasz problem, opisz go kaczce krok po kroku, jakbyś tłumaczył osobie nieznającej kodu.</li>
+            <li>Nie bój się mówić na głos – to pomaga uporządkować myśli!</li>
+            <li>Jeśli znajdziesz rozwiązanie – pogratuluj kaczce!</li>
+            <li>Stosuj tę metodę regularnie, a zauważysz poprawę w rozwiązywaniu problemów.</li>
+        </ol>
+    </section>
+    <section class="history">
+        <h3>Historia Rubber Duck Debugging</h3>
+        <p>
+            Technika <strong>Rubber Duck Debugging</strong> została opisana w książce <em>The Pragmatic Programmer</em> (1999). Autorzy sugerowali, by programista tłumaczył swój kod... gumowej kaczce! Okazało się, że samo werbalizowanie problemu często prowadzi do jego rozwiązania.
+        </p>
+        <p>
+            Dziś kaczuszka to nie tylko narzędzie, ale i symbol społeczności programistów na całym świecie.
+        </p>
+    </section>
+    <section class="quotes">
+        <h3>Cytaty o kaczkach i programowaniu</h3>
+        <blockquote>
+            "Najlepszy debugger to gumowa kaczka." – anonimowy programista
+        </blockquote>
+        <blockquote>
+            "Kaczka nie ocenia, kaczka słucha." – społeczność Stack Overflow
+        </blockquote>
+        <blockquote>
+            "Jeśli nie możesz wyjaśnić problemu kaczce, nie rozumiesz go wystarczająco dobrze." – parafraza Einsteina
+        </blockquote>
+    </section>
+    <section class="inspirations">
+        <h3>Inspiracje – jak wykorzystać kaczki?</h3>
+        <ul>
+            <li>Kaczka z okularami – symbol analitycznego myślenia</li>
+            <li>Kaczka z laptopem – Twój partner do kodowania</li>
+            <li>Kaczka z kawą – na trudne poranki programisty</li>
+            <li>Kaczka podróżniczka – zabierz ją na konferencję IT!</li>
+        </ul>
+        <div class="gallery" id="duckGallery2">
+            <img class="gallery-img" src="duck-glasses.png" alt="Kaczka w okularach" onclick="openImageModal(this)" />
+            <img class="gallery-img" src="duck-laptop.png" alt="Kaczka z laptopem" onclick="openImageModal(this)" />
+            <img class="gallery-img" src="duck-coffee.png" alt="Kaczka z kawą" onclick="openImageModal(this)" />
+            <img class="gallery-img" src="duck-travel.png" alt="Kaczka podróżniczka" onclick="openImageModal(this)" />
+        </div>
+    </section>
+    <section class="pro-cool">
+        <h3>Kaczka w świecie IT – symbol nowoczesnego programisty</h3>
+        <div class="pro-cool-flex">
+            <div>
+                <p>
+                    Współczesny programista to nie tylko kod, ale także <strong>kultura</strong> i <strong>społeczność</strong>. Gumowa kaczka stała się ikoną <span class="pro-cool-accent">nowoczesnego podejścia do rozwiązywania problemów</span> – łączy w sobie dystans, poczucie humoru i praktyczną skuteczność.
+                </p>
+                <p>
+                    W wielu biurach IT znajdziesz kaczki w stylu <span class="pro-cool-accent">cyberpunk</span>, z neonowymi okularami czy nawet z kodem QR prowadzącym do repozytorium zespołu. To nie tylko gadżet – to znak, że programista jest częścią globalnej społeczności, która ceni <strong>otwartość, kreatywność i wsparcie</strong>.
+                </p>
+                <p>
+                    <em>Dołącz do tej tradycji – niech Twoja kaczka będzie równie unikalna jak Twój kod!</em>
+                </p>
+            </div>
+            <div>
+                <img src="img/cyber-duck.jpg" alt="Kaczka w stylu cyberpunk" class="pro-cool-img"/>
+            </div>
+        </div>
+    </section>
+    <section class="duck-ai">
+        <h3>Kaczka jako mentor AI – połącz tradycję z przyszłością!</h3>
+        <div class="duck-ai-flex">
+            <div>
+                <p>
+                    Wyobraź sobie, że Twoja kaczka to nie tylko słuchacz, ale także <span class="duck-ai-accent">cyfrowy mentor</span>. Połącz siły z chatbotami, AI i automatyzacją – opowiadaj o problemach zarówno kaczce, jak i sztucznej inteligencji. Czasem najlepsze rozwiązania rodzą się na styku tradycji i technologii!
+                </p>
+                <p>
+                    <strong>Pomysł na kreatywną rutynę:</strong>
+                    <ul>
+                        <li>Opisz problem kaczce na głos.</li>
+                        <li>Spróbuj sformułować go jako prompt dla AI.</li>
+                        <li>Porównaj odpowiedzi – wybierz najlepsze elementy z obu światów.</li>
+                    </ul>
+                </p>
+                <blockquote class="duck-ai-quote">
+                    "Najlepszy mentor to ten, który słucha bez oceniania – czy to kaczka, czy sztuczna inteligencja."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <section class="faq">
+        <h3>FAQ – Najczęstsze pytania</h3>
+        <dl>
+            <dt>Czy kaczka naprawdę pomaga w debugowaniu?</dt>
+            <dd>Tak! Mówienie na głos pomaga uporządkować myśli i dostrzec błędy, które umykają podczas cichego czytania kodu.</dd>
+            <dt>Jaką kaczkę wybrać?</dt>
+            <dd>Każda kaczka się nada! Najważniejsze, by była Twoja i budziła pozytywne skojarzenia.</dd>
+            <dt>Czy mogę użyć innego przedmiotu?</dt>
+            <dd>Oczywiście – liczy się sam proces tłumaczenia problemu na głos. Kaczka to po prostu sympatyczny symbol.</dd>
+            <dt>Czy to działa tylko w programowaniu?</dt>
+            <dd>Nie! Metoda sprawdza się także w nauce, rozwiązywaniu problemów matematycznych czy planowaniu projektów.</dd>
+        </dl>
+    </section>
+</div>
+<footer class="footer">
+    <div class="footer-row">
+        <div class="footer-links">
+            <a href="https://pl.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank">Rubber Duck Debugging</a> |
+            <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a> |
+            <a href="https://en.wikipedia.org/wiki/Duck" target="_blank">Wikipedia: Duck</a> |
+            <a href="#" target="_blank">Galeria inspiracji (dodaj swoje zdjęcie kaczki)</a>
+        </div>
+        <div class="footer-sound" id="footerSound">
+            <button onclick="playDuckSound()">Dźwięk kaczki</button>
+        </div>
+    </div>
+    <div class="footer-name">Kamil Pogonowski &copy; 2025 | Projekt graficzny: Photoshop, dźwięk: Audacity</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
