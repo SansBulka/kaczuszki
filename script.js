@@ -1,4 +1,9 @@
 const text = "Kaczki – Twój pomocnik w programowaniu!";
+const duckSounds = [
+    'audio/kaczka1.mp3',
+    'audio/kaczka2.mp3',
+    'audio/kaczka3.mp3'
+];
 
 let i = 0;
 function typeWriter() {
@@ -20,7 +25,9 @@ function changeDuckColor(color) {
 }
 
 function playDuckSound() {
-    document.getElementById('duckAudio').play();
+    const randomIndex = Math.floor(Math.random() * duckSounds.length);
+    const audio = new Audio(duckSounds[randomIndex]);
+    audio.play();
 }
 
 function openImageModal(img) {
