@@ -35,6 +35,8 @@ function openImageModal(img) {
     document.body.style.overflow = 'hidden';
 }
 
+
+
 function closeImageModal(event) {
     if (
         event.target.classList.contains('img-modal') ||
@@ -94,7 +96,6 @@ function fadeInAudio(audio, duration = 2000) {
 function playDuckSound() {
     const randomIndex = Math.floor(Math.random() * duckSounds.length);
     const jew = new Audio('dzwiek/jew.mp3');
-    const kaczka = new Audio('dzwiek/kaczka1.mp3');
     duckSoundClicks++;
     if (duckSoundClicks === 10) {
         jew.play();
