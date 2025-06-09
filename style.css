@@ -25,6 +25,13 @@ body {
     text-shadow: 0 2px 8px #232946, 0 1px 2px #39ff14;
 }
 
+#duckImg{
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(39,255,255,0.08);
+    border: 2px solid #6c63ff;
+    width: 500px;
+}
+
 @media (max-width: 700px) {
     .banner {
         display: none;
@@ -48,8 +55,6 @@ body {
         justify-content: center;
     }
     .gallery-img {
-        width: 220px;
-        height: 220px;
         margin: 0 10px;
         cursor: pointer;
         transition: transform 0.2s;
@@ -92,7 +97,6 @@ body {
     #footerSound { display: block; }
 }
 
-/* Mobilka 720px- */
 @media (max-width: 720px) {
     .container {
         max-width: 100vw;
@@ -162,7 +166,7 @@ body {
     max-width: 1400px;
     margin: auto;
     padding: 20px;
-    background: #232946;
+    background: #191e33;
     box-shadow: 0 2px 16px rgba(0,0,0,0.18);
     border-radius: 16px;
 }
@@ -189,8 +193,7 @@ body {
 }
 
 .gallery img {
-    width: 120px;
-    height: 120px;
+    height: 30vh;
     object-fit: cover;
     border-radius: 12px;
     border: 2px solid #39ff14;
@@ -589,7 +592,7 @@ body {
     position: relative;
 }
 .value-partner::before {
-    content: "🤝";
+    content: "🧑‍💻";
     font-size: 2.1rem;
     position: absolute;
     left: 50%; top: 50%;
@@ -601,7 +604,7 @@ body {
     position: relative;
 }
 .value-innovation::before {
-    content: "🚀";
+    content: "📑";
     font-size: 2.1rem;
     position: absolute;
     left: 50%; top: 50%;
@@ -624,7 +627,6 @@ body {
     margin: 0;
 }
 
-/* Responsywność dla sekcji wartości */
 @media (max-width: 900px) {
     .values-flex {
         flex-direction: column;
@@ -692,7 +694,7 @@ body {
     to { transform: scale(1);}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
     .img-modal-content {
         max-width: 98vw;
         max-height: 60vh;

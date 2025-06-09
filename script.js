@@ -1,4 +1,4 @@
-const text = "Kaczuszki – Twój pomocnik w programowaniu!";
+const text = "Kaczki – Twój pomocnik w programowaniu!";
 
 let i = 0;
 function typeWriter() {
@@ -14,9 +14,9 @@ window.onload = typeWriter;
 
 function changeDuckColor(color) {
     const img = document.getElementById('duckImg');
-    if (color === 'red') img.src = 'duck-red.png';
-    if (color === 'orange') img.src = 'duck-orange.png';
-    if (color === 'yellow') img.src = 'duck-yellow.png';
+    if (color === 'red') img.src = 'img/kaczka-red.jpg';
+    if (color === 'orange') img.src = 'img/kaczka-orange.jpg';
+    if (color === 'yellow') img.src = 'img/kaczka.jpg';
 }
 
 function playDuckSound() {
